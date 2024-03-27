@@ -7,33 +7,38 @@ namespace UsedCases
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
         public const int EMP_RATE_PER_HOUR = 20;
+        public const int NUM_OF_WORKING_DAYS = 2;
         static void Main(string[] args)
         {
             int empHrs = 0;
             int empWage = 0;
+            int totalEmpWage = 0;
 
-            Random ran = new Random();
+            //...above int can be also woitten as
+            // int empHrs = 0, empWage = 0, totalEmpWage = 0;
 
-            int empCheck = ran.Next(0, 3);
-
-            switch(empCheck)
+            for(int day = 0; day < NUM_OF_WORKING_DAYS; day++)
             {
-                case IS_PART_TIME:
-                    Console.WriteLine("Calculating part-time wages : ");
-                    empHrs = 4;
-                    break;
-                case IS_FULL_TIME:
-                    Console.WriteLine("Calculating full-time wages : ");
-                    empHrs = 8;
-                    break;
-                default:
-                    Console.WriteLine("No working employee : ");
-                    empHrs = 0;
-                    break;
+                Random ran = new Random();
+                int empCheck = ran.Next(0, 3);
+                switch(empCheck)
+                {
+                    case IS_PART_TIME:
+                        empWage = 4;
+                        break;
+                    case IS_FULL_TIME:
+                        empHrs = 8;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                empWage = empHrs * EMP_RATE_PER_HOUR;
+                totalEmpWage += empWage;
+                Console.WriteLine($"Day: {day + 1} Emp Hrs: {empHrs} Emp Wage: {empWage}");
+                
             }
-
-            empWage = empHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Emp Wage : "+empWage);
+            Console.WriteLine("Total Emp Wage : "+totalEmpWage);
         }
     }
 }
