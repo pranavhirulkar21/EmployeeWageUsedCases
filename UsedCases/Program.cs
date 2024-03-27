@@ -4,33 +4,34 @@ namespace UsedCases
 {
     internal class Program
     {
+        public const int IS_PART_TIME = 1;
+        public const int IS_FULL_TIME = 2;
+        public const int EMP_RATE_PER_HOUR = 20;
         static void Main(string[] args)
         {
-            int IS_PART_TIME = 1;
-            int IS_FULL_TIME = 2;
-            int EMP_RATE_PER_HOUR = 20;
-
             int empHrs = 0;
             int empWage = 0;
 
             Random ran = new Random();
 
             int empCheck = ran.Next(0, 3);
-            if (empCheck == IS_PART_TIME)
+
+            switch(empCheck)
             {
-                Console.WriteLine("Calculating Part-Time Wages : ");
-                empHrs = 4;   
+                case IS_PART_TIME:
+                    Console.WriteLine("Calculating part-time wages : ");
+                    empHrs = 4;
+                    break;
+                case IS_FULL_TIME:
+                    Console.WriteLine("Calculating full-time wages : ");
+                    empHrs = 8;
+                    break;
+                default:
+                    Console.WriteLine("No working employee : ");
+                    empHrs = 0;
+                    break;
             }
-            else if (empCheck == IS_FULL_TIME)
-            {
-                Console.WriteLine("Calculating Full-Time Wages : ");
-                empHrs = 8;
-            }
-            else
-            {
-                Console.WriteLine("Employee is not working : ");
-                empHrs = 0;
-            }
+
             empWage = empHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Emp Wage : "+empWage);
         }
