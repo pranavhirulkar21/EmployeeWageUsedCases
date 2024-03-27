@@ -11,3 +11,4 @@ C:\Users\Pranav Hirulkar\OneDrive\Desktop\Practice\UsedCases\UsedCases\UsedCases
 C:\Users\Pranav Hirulkar\OneDrive\Desktop\Practice\UsedCases\UsedCases\UsedCases\obj\Debug\netcoreapp3.1\UsedCases.dll
 C:\Users\Pranav Hirulkar\OneDrive\Desktop\Practice\UsedCases\UsedCases\UsedCases\obj\Debug\netcoreapp3.1\UsedCases.pdb
 C:\Users\Pranav Hirulkar\OneDrive\Desktop\Practice\UsedCases\UsedCases\UsedCases\obj\Debug\netcoreapp3.1\UsedCases.genruntimeconfig.cache
+C:\Users\Pranav Hirulkar\OneDrive\Desktop\Practice\UsedCases\UsedCases\UsedCases\obj\Debug\netcoreapp3.1\UsedCases.sourcelink.json
